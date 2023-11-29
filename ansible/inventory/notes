@@ -1,0 +1,5 @@
+RUN the following to set a inv file for targets and playbook file name
+ansible-playbook -i inv playbook.yml -vv
+
+RUN playbook with external vars
+ansible-playbook playbook7.yml --extra-vars @input.yml -vv

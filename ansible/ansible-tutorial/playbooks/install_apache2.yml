@@ -1,0 +1,15 @@
+---
+- name: Install Apache
+  hosts: workers
+  become: true
+  
+  tasks:
+    - name: update cache
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install Apache
+      ansible.builtin.apt:
+        name: apache2
+        state: latest
+        update_cache: yes
